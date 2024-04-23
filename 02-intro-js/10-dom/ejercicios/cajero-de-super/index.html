@@ -4,10 +4,10 @@
     <title></title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <form onSubmit="return false;">
+    <!-- <form onsubmit="return false;"> -->
+    <form>
       <h1>Cajero de super</h1>
       <label for="nombre">Nombre:</label>
       <input type="text" id="nombre" />
@@ -18,9 +18,19 @@
       <label for="precio">Precio:</label>
       <input type="number" id="precio">
       <br />
-      <button onclick="agregar()">Agregar</button>
-      <button onclick="calcular()">Enviar</button>
+      <!-- <button onclick="agregar()">Agregar</button> -->
+      <button id="boton-agregar" type="button">Agregar</button>
+      <!-- <button onclick="calcular()">Calcular</button> -->
+      <button id="boton-calcular">Calcular</button>
     </form>
+    <div id="productos-agregados">
+      <h3>Productos en mi cesta / carrito</h3>
+      <p id="mensaje-cesta-vacia">Mi cesta está vacía</p>
+      <ul id="lista-productos">
+        <!-- <li>Nombre: jugo ...</li> -->
+      </ul>
+      <!-- Mostras los productos que se agreguen a la cesta -->
+    </div>
     <div id="total"></div>
     <script src="js/cajero-de-super.js"></script>
   </body>
